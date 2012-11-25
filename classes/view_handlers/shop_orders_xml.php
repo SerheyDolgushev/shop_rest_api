@@ -49,7 +49,7 @@ class ShopOrdersXMLViewHandler implements ezcMvcViewHandler
 				$priceAttributes   = array( 'product_total_inc_vat', 'product_total_ex_vat', 'total_inc_vat', 'total_ex_vat' );
 				$productItems      = $order->attribute( 'product_items' );
 				$paymentObject     = call_user_func( array( $paymentObjectClass, 'fetchByOrderID' ), $order->attribute( 'id' ) );
-				$isPaid            = is_object( $paymentObject ) ? (int) $paymentObject->status : 0;
+				$isPaid            = is_object( $paymentObject ) ? (int) $paymentObject->attribute( 'status' ) : 0;
 
 				$orderNode->appendChild( $dom->createElement( 'id', $order->attribute( 'id' ) ) );
 				$orderNode->appendChild( $dom->createElement( 'order_nr', $order->attribute( 'order_nr' ) ) );

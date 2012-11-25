@@ -11,7 +11,7 @@ class ShopProvider implements ezpRestProviderInterface
 	public function getRoutes()	{
 		return array(
 			'exportOrders' => new ezpMvcRegexpRoute(
-				'@^/orders/export(/(?P<onlyNew>[1|0]+))?(/(?P<output>[json|xml]+))?$@',
+				'@^/orders/export(/(?P<onlyNew>[1|0]+))?$@',
 				'ShopController',
 				'exportOrders',
 				array(

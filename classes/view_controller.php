@@ -9,13 +9,6 @@
 class ShopViewController implements ezpRestViewControllerInterface
 {
 	public function loadView( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request, ezcMvcResult $result ) {
-		if(
-			isset( $request->variables['output'] )
-			&& $request->variables['output'] == 'json'
-		) {
-			return new ezpRestJsonView( $request, $result );
-		}
-
 		return new ShopXMLView( $request, $result );
 	}
 }
