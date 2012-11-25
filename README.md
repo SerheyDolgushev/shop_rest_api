@@ -1,2 +1,2 @@
-shop_rest_api
-=============
+eZ Publish REST API for Webshop
+===============================
