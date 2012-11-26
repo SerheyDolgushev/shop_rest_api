@@ -15,6 +15,6 @@ class ShopXMLView extends ezcMvcView
 	}
 
 	public function createZones( $layout ) {
-		return array( new ShopOrdersXMLViewHandler( 'content' ) );
+		return array( new XMLFeedViewHandler( 'content' ) );
 	}
 }
